@@ -37,7 +37,7 @@ async function getAddressBalance(web3, address) {
   );
 
   const balance = await paperHandsStaking.methods
-    .viewAllRewards(address)
+    .viewPassivePendingReward(address)
     .call();
   return balance;
 }
